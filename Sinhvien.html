@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bai tap</title>
+</head>
+<body>
+    <h1>GitHub Pages</h1>
+
+    <script>
+        let fullName = "Ngo Kim Ngan";
+        let studentId = "27A4042967";
+
+        let nameParts = fullName.toLowerCase().split(" ");
+        let lastName = nameParts[nameParts.length - 1];
+        let initials = nameParts[0][0] + nameParts[1][0];
+
+        let email = lastName + initials +"."+  studentId + "@hvnh.edu.vn";
+
+        let coursePeriod = studentId.substring(0, 2);
+        let faculty = "Công nghệ thông tin và Kinh tế số";
+
+        let last4 = studentId.slice(-4);
+        let sum = 0;
+        for (let digit of last4) {
+            sum += Number(digit);
+        }
+
+        document.write(`
+            <p>Email: ${email}</p>
+            <p>Xin chào ${fullName}, bạn là sinh viên khóa ${coursePeriod}, khoa ${faculty}, tổng 4 số cuối là ${sum}</p>
+        `);
+    </script>
+</body>
+</html>
